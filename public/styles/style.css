@@ -56,7 +56,9 @@ html {
   width: auto;
 }
 .number{
-  width: 140px;
+  cursor: pointer;
+  width: 150px;
+  font-weight: bold;
 }
 .contact {
   margin-left: 10px;
@@ -70,6 +72,7 @@ html {
   height: 39px;
 }
 .basket {
+  cursor: pointer;
   display: flex;
   width: 112px;
   height: 38px;
@@ -80,15 +83,21 @@ html {
   flex-direction: row;
   justify-content: space-between;
   padding: 7px 13px 7px 24px;
+  font-weight: bold;
+
 }
+
 .basket__seporation {
-  color: rgba(255, 255, 255, 0.3);
-  width: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 2px;
   height: 38px;
 }
 .banner__img{
   width: 100vw;
+  box-sizing: border-box;
   height: auto;
+  cursor: pointer;
+
 }
 .list__menu{
   list-style: none;
@@ -97,6 +106,9 @@ html {
   width: auto;
   height: auto;
   margin: 29px 88px 28px 80px;
+}
+.list__menu--text{
+  cursor: pointer;
 }
 .seporator{
   width: 100%;
@@ -120,6 +132,9 @@ html {
   margin-right: 19px;
 }
 .about__us{
+  display: none;
+  position: relative;
+  flex-direction: column-reverse;
   box-sizing: border-box; 
   width: auto;
   height: auto;
@@ -128,6 +143,22 @@ html {
 .about__us--img{
   width: 100%;
   height: auto;
+  z-index: 1;
+}
+.about_us--button{
+  position: absolute;
+  margin: 0 0 101px 70px;
+  font-family: 'Proxima Nova';
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  z-index: 2;
+  cursor: pointer;
+  width: 14%;
+  height: 9%;
+  background-color: rgba(255, 255, 255, 0.05);
+  stroke: rgba(255, 255, 255, 0.2);
+  border-radius: 13px;
 }
 .contacts{
   display: flex;
@@ -236,6 +267,12 @@ html {
   width: 108px;
   margin-left: 24px;
   justify-content: space-between;
+}
+.soc_sety--FACE,
+.soc_sety--VK,
+.soc_sety--YT,
+.soc_sety--INST{
+  cursor: pointer;
 }
 .bottom{
   background: linear-gradient(225deg, rgb(68, 64, 63), rgb(33, 31, 32) 80%);
