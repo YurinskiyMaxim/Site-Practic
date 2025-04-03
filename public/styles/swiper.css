@@ -66,7 +66,6 @@
 }
 .swiper-slide__button {
   transition: 0.5s;
-  transform: scale(1);
   display: flex;
   justify-content: space-between;
   padding: 10px 16px 10px 19px;
@@ -85,7 +84,9 @@
 .swiper-slide__button:hover{
   transition: 0.5s;
   transform: scale(0.95);
-
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .swiper-pagination-bullet {

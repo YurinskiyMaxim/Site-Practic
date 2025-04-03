@@ -24,6 +24,7 @@ html {
     justify-content: center;
   }
 }
+
 #header__phone{
   display: flex;
   flex-direction: row;
@@ -67,6 +68,8 @@ html {
   }
 }
 .basket2{
+  border: none;
+  color: white;
   font-weight: bolder;
   font-size: 12px;
   width: 62px;
@@ -107,11 +110,30 @@ html {
     width: auto;
   }
 }
+
 .address {
   display: flex;
+  position: relative;
   align-items: center;
-  width: 230px;
-  justify-content: space-between;
+  max-width: 555px;
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  padding-left: 10px;
+}
+.address:focus-within{
+  border: none;
+  outline: none;
+  color: white;
+}
+.address::placeholder,
+.address:focus-within,
+.address{
+  color: white;
+  font-family: 'Gilroy';
+  font-size: 18px;
+  font-weight: 300;
 }
 .call__icon {
   cursor: pointer;
@@ -182,6 +204,18 @@ html {
   background-color: rgba(255, 255, 255, 0.3);
   width: 2px;
   height: 38px;
+}
+.banner{
+  transform: translateX(-150%);
+  animation: ani 1s forwards;
+  opacity: 0;
+  animation: ani 2.5s forwards;
+}
+@keyframes ani {
+  0% {transform: translateX(-150%);}
+  100% {transform: translateY(0);}
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
 .banner__img{
   width: 100vw;
