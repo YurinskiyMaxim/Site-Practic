@@ -98,6 +98,7 @@ html {
   flex-direction: row;
   min-width: 314px;
   width: 655px;
+  color: white;
   height: 52px;
   padding: 0px 17px 0px 14px;
   border-radius: 10px;
@@ -151,23 +152,30 @@ html {
 }
 
 .basket {
+  color: white;
   cursor: pointer;
   display: flex;
-  max-width: 112px;
-  max-height: 38px;
-  min-width: 112px;
-  min-height: 38px;
+  transition: 0.5s;
+  max-width: 149px;
+  max-height: 52px;
+  min-width: 149px;
+  min-height: 52px;
   background: linear-gradient(180deg, rgb(97, 137, 103), rgb(114, 164, 121));
   border-radius: 10px;
   margin-left: 20px;
   align-items: center;
   flex-direction: row;
+  border: none;
   justify-content: space-between;
   padding: 7px 13px 7px 24px;
   font-weight: bold;
   @media (max-width:730px) {
     display: none;
   }
+}
+.basket:hover{
+  transition: 0.5s;
+  transform: scale(0.95);
 }
 
 .basket__seporation {
@@ -237,7 +245,7 @@ html {
   margin-right: 19px;
 }
 .about__us{
-  display: none;
+  display: flex;
   position: relative;
   flex-direction: column-reverse;
   box-sizing: border-box; 
@@ -249,21 +257,6 @@ html {
   width: 100%;
   height: auto;
   z-index: 1;
-}
-.about_us--button{
-  position: absolute;
-  margin: 0 0 101px 70px;
-  font-family: 'Proxima Nova';
-  font-size: 13px;
-  font-weight: bold;
-  color: white;
-  z-index: 2;
-  cursor: pointer;
-  width: 14%;
-  height: 9%;
-  background-color: rgba(255, 255, 255, 0.05);
-  stroke: rgba(255, 255, 255, 0.2);
-  border-radius: 13px;
 }
 .contacts{
   display: flex;
@@ -349,6 +342,7 @@ html {
 .bronirovanie__button{
   background: linear-gradient(135deg, rgb(97, 137, 103), rgb(114, 164, 121));
   color: white;
+  transition: 0.5s;
   text-transform: uppercase;
   font-family: 'Proxima Nova';
   font-weight: bold;
@@ -362,8 +356,13 @@ html {
     width: 217px;
   }
 }
+.bronirovanie__button:hover{
+  transition: 0.5s;
+  transform: scale(0.95);
+}
 .marshrute__conteiner{
   display: flex;
+  transition: 0.5s;
   width: 217px;
   height: 59px;
   border-radius: 10px;
@@ -387,6 +386,10 @@ html {
   @media (min-width:730px) {
     display: none;
   }
+}
+.marshrute__conteiner:hover{
+  transition: 0.5s;
+  transform: scale(0.95);
 }
 .bronirovanie__text{
   list-style: none;
@@ -432,6 +435,7 @@ html {
   align-items: center;
 }
 .bottom__button{
+  transition: 0.5s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -441,11 +445,16 @@ html {
   border: none;
   border-radius: 100%;
   margin-left:40px;
+  cursor: pointer;
   @media (max-width:1024px) {
     min-width: 44px;
     min-height: 44px;
     margin-left:16px;
   }
+}
+.bottom__button:hover{
+  transition: 0.5s;
+  transform: scale(0.95);
 }
 .bottom__text1,
 .bottom__text2{

@@ -65,6 +65,8 @@
   width: 289px;
 }
 .swiper-slide__button {
+  transition: 0.5s;
+  transform: scale(1);
   display: flex;
   justify-content: space-between;
   padding: 10px 16px 10px 19px;
@@ -80,6 +82,12 @@
   height: 44px;
   cursor: pointer;
 }
+.swiper-slide__button:hover{
+  transition: 0.5s;
+  transform: scale(0.95);
+
+}
+
 .swiper-pagination-bullet {
   display: none;
 }
