@@ -45,6 +45,7 @@ html {
   font-size: 12px;
   padding: 0;
   align-items: center;
+  cursor: pointer;
   @media (min-width:730px) {
     display: none;
   }
@@ -64,6 +65,7 @@ html {
   font-weight: 800;
   font-size: 25px;
   margin-left: 37px;
+  cursor: pointer;
   @media (min-width:730px) {
     display: none;
   }
@@ -81,6 +83,7 @@ html {
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+  cursor: pointer;
   @media (min-width:730px) {
     display: none;
   }
@@ -401,6 +404,7 @@ html {
 .marshrute__conteiner{
   display: flex;
   transition: 0.5s;
+  cursor: pointer;
   width: 217px;
   height: 59px;
   border-radius: 10px;
@@ -512,6 +516,7 @@ html {
   font-weight: 700;
   font-size: 25px;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 .bottom__text2{
   font-weight: normal;

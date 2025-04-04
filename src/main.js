@@ -18,14 +18,32 @@ go_back2.forEach(go_back2 => {
     })
 })
 const basket = document.querySelectorAll('.basket');
+const basket2 = document.querySelectorAll('.basket2');
 basket.forEach(basket => {
     basket.addEventListener('click', () => {
         window.location.href='./basket.html';
     })
 })
-const index= document.querySelectorAll('.logo', '.bottom__logo');
+basket2.forEach(basket2 => {
+    basket2.addEventListener('click', () => {
+        window.location.href='./basket.html';
+    })
+})
+const index= document.querySelectorAll('.logo');
+const index2= document.querySelectorAll('.bottom__logo');
+const index3= document.querySelectorAll('.logo2');
 index.forEach(index => {
     index.addEventListener('click', () => {
+        window.location.href='./index.html';
+    })
+})
+index2.forEach(index2 => {
+    index2.addEventListener('click', () => {
+        window.location.href='./index.html';
+    })
+})
+index3.forEach(index3 => {
+    index3.addEventListener('click', () => {
         window.location.href='./index.html';
     })
 })
