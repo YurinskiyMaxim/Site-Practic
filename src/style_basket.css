@@ -1,0 +1,22 @@
+body,
+html {
+  background: linear-gradient(180deg, rgb(68, 64, 63), rgb(33, 31, 32));
+  color: white;
+  margin: 0;
+  font-family: 'Gilroy';
+}
+.to_choose_dish{
+    display: flex;
+    flex-direction: row;
+    width: 135px;
+    align-items: center;
+    height: 25px;
+    justify-content: space-between;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 34px 0 19px 318px;
+}
+.to_choose_dish__text{
+    padding-bottom: 4px;
+}
