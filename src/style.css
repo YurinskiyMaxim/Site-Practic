@@ -3,8 +3,12 @@ html {
   background: linear-gradient(180deg, rgb(68, 64, 63), rgb(33, 31, 32));
   color: white;
   margin: 0;
-  font-family: 'Gilroy';
 }
+
+*{
+    font-family: 'Gilroy';
+}
+
 #header {
   display: flex;
   background-color: #403c3b;
@@ -138,7 +142,6 @@ html {
 .address:focus-within,
 .address{
   color: white;
-  font-family: 'Gilroy';
   font-size: 18px;
   font-weight: 300;
 }
