@@ -52,3 +52,17 @@ backToTop.addEventListener("click", function (event) {
     event.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+const go_to_kard = document.querySelectorAll('.to_choose_dish');
+go_to_kard.forEach(go_to_kard => {
+    go_to_kard.addEventListener('click', () => {
+        window.location.href='./Карточка.html';
+    })
+})
+
+const make__order = document.querySelectorAll('.make__order');
+make__order.forEach(make__order => {
+    make__order.addEventListener('click', () => {
+        window.location.href='./make_order.html';
+    })
+})

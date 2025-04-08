@@ -217,6 +217,12 @@ html {
         margin-left: 0px;
     }
 }
+.compound__name{
+    margin-bottom: 10px;
+}
+.compound__num{
+    margin: 10px 0 10px 50px;
+}
 .compound__name--last,
 .compound__num--last{
     margin-right: 200px;
@@ -227,7 +233,7 @@ html {
 .kartochka__seporator{
     width: 100%;
     box-sizing:border-box;
-    height: 1px;
+    height: 2px;
     margin-right: 7px;
     background-color: rgba(255, 255, 255, 0.1);
 }

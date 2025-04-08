@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site</title>
+  <link rel="stylesheet" href="./src/style.css">
+  <link rel="stylesheet" href="./src/style_make_order.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  <link rel="stylesheet" href="./src/swiper.css">
+  <link rel="stylesheet" href="./src/style_basket.css">
+</head>
+<body>
+  <div id="header">
+    <div id="header__phone">
+      <ul class="burger">
+        <li><img src="./public/IMG/burger.svg" alt=""></li>
+        <li>меню</li>
+      </ul>
+      <div class="logo2">SavoryBites</div>
+      <button class="basket2">
+        <img class="basket2__img" src="./public/IMG/basket.svg" alt="">
+        <div class="basket__seporation2"></div>
+        корзина
+      </button>
+    </div>
+    <div class="logo">SavoryBites</div>
+    <div class="search__bar">
+      <img src="./public/icons/Location.svg" alt="">
+      <input class="address" placeholder="Введите адрес доставки"></input>
+      <img src="./public/icons/Search.svg" alt="">
+  </div>
+    <div class="calling">
+      <div class="call__icon"><img src="./public/icons/Calling.svg" alt=""></div>
+      <div class="contact">
+        <ul class="contact__text">
+          <li>Контакты:</li>
+          <li class="number">+7 (914) 137-82-02</li>
+        </ul>
+      </div>
+    </div>
+    <button class="basket">
+      <div class="basket__text">Корзина</div>
+      <div class="basket__seporation"></div>
+      <div class="basket__number">0</div>
+    </button>
+  </div>
+  <div class="seporator"></div>
+  <div class="to_basket">
+    <div><img src="./public/IMG/Arrow Back.svg" alt=""></div>
+    <div class="to_basket__text">в корзину</div>
+  </div>
+  <div class="make_order">
+    <div class="make_order__seporator"></div>
+    <div class="make_order__text">Оформление заказа</div>
+  </div>
+  <div class="konkact_info">
+    <div class="konkact_info__zagol">1. Контактная информация</div>
+    <div class="konkact_info__inputs">
+      <div class="input__conteiner1">
+        <input class="konkact_info__input1" type="text" placeholder="Имя*">
+      </div>
+      <div class="input__conteiner2">
+        <input class="konkact_info__input2" type="text" placeholder="Телефон*">
+      </div>
+    </div>
+  </div>
+  <div class="dostavka_info">
+    <div class="dostavka_info__zagol">2. Доставка</div>
+    <div class="dostavka_info__sel_time">
+      <div class="container">
+        <div class="pane">
+            <label class="label">
+                <span>Доставка</span>
+                <input id="left" class="input" name="radio" type="radio">
+            </label>
+            <label class="label">
+                <span>Самовывоз</span>
+                <input id="middle" class="input" checked="checked" name="radio" type="radio">
+            </label>
+            <span class="selection"></span>
+        </div>
+      </div>
+      <div class="dostavka__time">
+        <div><img src="./public/icons/clock.svg" alt=""></div>
+        <div>Доставим через  1 час 30 минут</div>
+      </div>
+    </div>
+    <div class="dostavka__adres">Адрес доставки</div>
+    <div class="dostavka__adres--all_inputs">
+      <div class="dostavka__adres--inputs1">
+        <div class="dostavka__adres--inputs1-1-cont">
+          <input type="text" placeholder="Укажите улицу*">
+        </div>
+        <div class="dostavka__adres--inputs1-2-cont">
+          <input type="number" placeholder="Номер дома*">
+        </div>
+      </div>
+      <div class="dostavka__adres--inputs2">
+        <div class="dostavka__adres--inputs2-1-cont">
+          <input type="number" placeholder="№ квартиры/офиса">
+        </div>
+        <div class="dostavka__adres--inputs2-2-cont">
+          <input type="number" placeholder="Подъезд">
+        </div>
+        <div class="dostavka__adres--inputs2-3-cont">
+          <input type="number" placeholder="Этаж">
+        </div>
+      </div>
+      <div class="dostavka__adres--inputs3-1-cont ">
+        <input class="dostavka__adres--inputs3-1" type="text" placeholder="Комментарий">
+      </div>
+    </div>
+  </div>
+  <div class="dostavka__payment">
+    <div class="dostavka__payment--zagol">3. Оплатить</div>
+    <div class="container2">
+      <div class="pane2">
+          <label class="label2">
+              <span>Оплата онлайн</span>
+              <input id="left" class="input" name="radio" type="radio">
+          </label>
+          <label class="label2">
+              <span>Курьеру картой</span>
+              <input id="middle" class="input" checked="checked" name="radio" type="radio">
+          </label>
+          <label class="label2">
+            <span>Наличными</span>
+            <input id="middle" class="input" checked="checked" name="radio" type="radio">
+        </label>
+          <span class="selection2"></span>
+      </div>
+    </div>
+    <div class="change_with--cont">
+      <input type="number" placeholder="Сдача с">
+    </div>
+  </div>
+  <div></div>
+  <div></div>
+  <div class="bottom">
+    <button class="bottom__button"> <img src="./public/IMG/Arrow.svg" alt="UP"></button>
+    <ul class="bottom__text1">
+      <div class="bottom__logo">SavoryBites</div>
+      <li>© ООО «SavoryBites»<br>
+        Все права защищены. 2010-2020</li>
+      <ul class="bottom__text2">
+        <li>Пользовательское соглашение</li>
+        <li>Карта сайта</li>
+        <li>Политика конфиденциальности</li>
+      </ul>
+    </ul>
+    <ul class="bottom__text3">
+      <ul class="bottom__text3-1">
+        <li>О ресторане</li>
+        <li>Условия доставки</li>
+      </ul>
+      <ul class="bottom__text3-2">
+        <li>Возврат товара</li>
+      <li>Акции</li>
+      </ul>
+    </ul>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./src/Swiper.js"></script>
+<script src="./src/main.js"></script>
+</html>

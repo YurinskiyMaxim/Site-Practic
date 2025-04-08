@@ -20,9 +20,15 @@ html {
     font-size: 16px;
     font-weight: bold;
     margin: 34px 0 19px 318px;
+    cursor: pointer;
+    transition: 0.5s;
     @media (max-width:768px) {
     margin-left: 24px;
   }
+}
+.to_choose_dish:hover{
+  transition: 0.5s;
+  transform: scale(0.95);
 }
 .to_choose_dish__text{
     padding-bottom: 4px;
@@ -106,7 +112,7 @@ html {
 .products__seporator{
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
   width: 100%;
-  height: 1px;
+  height: 2px;
   box-sizing: content-box;
 }
 
@@ -170,10 +176,17 @@ html {
   border: none;
   background-color: #72A479;
   cursor: pointer;
+  transition: 0.5s;
     @media (max-width:768px) {
       width: 18px;
       height: 18px;
   }
+}
+.plus:hover,
+.mines:hover,
+.delete__item:hover{
+  transition: 0.5s;
+  transform: scale(0.95);
 }
 .quantity{
   font-weight: bold;
@@ -317,6 +330,11 @@ html {
   justify-content: center;
   cursor: pointer;
   margin-left: 7px;
+  transition: 0.5s;
+}
+.add_to_order__menu--plus:hover{
+  transition: 0.5s;
+  transform: scale(0.9);
 }
 .add_to_order__menu--item3{
   display: flex;
@@ -329,10 +347,10 @@ html {
 .add_to_order__menu--seporator{
   display: flex;
   height: auto;
-  width: 1px;
+  width: 2px;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
   @media (max-width:375px) {
-    height: 1px;
+    height: 2px;
     width: 100%;
     box-sizing: border-box;
   }
@@ -439,7 +457,12 @@ html {
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
+  transition: 0.5s;
     @media (max-width:768px) {
       margin-top: 19px;
   }
+}
+.make__order:hover{
+  transition: 0.5s;
+  transform: scale(0.95);
 }
