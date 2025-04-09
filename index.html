@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site</title>
+  <link rel="stylesheet" href="./src/swiper.css">
+  <link rel="stylesheet" href="./src/preloader.css">
   <link rel="stylesheet" href="./src/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -12,8 +14,34 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
   <link rel="stylesheet" href="./src/swiper.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./src/slider.css">
 </head>
 <body>
+  <div id="preloader" class="preloader">
+    <div class="loader">
+      <span style="--i:1"></span>
+      <span style="--i:2"></span>
+      <span style="--i:3"></span>
+      <span style="--i:4"></span>
+      <span style="--i:5"></span>
+      <span style="--i:6"></span>
+      <span style="--i:7"></span>
+      <span style="--i:8"></span>
+      <span style="--i:9"></span>
+      <span style="--i:10"></span>
+      <span style="--i:11"></span>
+      <span style="--i:12"></span>
+      <span style="--i:13"></span>
+      <span style="--i:14"></span>
+      <span style="--i:15"></span>
+      <span style="--i:16"></span>
+      <span style="--i:17"></span>
+      <span style="--i:18"></span>
+      <span style="--i:19"></span>
+      <span style="--i:20"></span>
+    </div>
+  </div>
   <div id="header">
     
     <div id="header__phone">
@@ -51,16 +79,30 @@
   </div>
   <div class="seporator"></div>
   <div class="banner"><img class="banner__img" src="./public/icons/баннер 1.svg" alt=""><img class="banner__img2" src="./public/icons/баннер 2.svg" alt=""></div>
-  <ul class="list__menu">
-    <li class="list__menu--text">Холодная закуска</li>
-    <li class="list__menu--text">Горячая закуска</li>
-    <li class="list__menu--text">Мясные блюда</li>
-    <li class="list__menu--text">Супы</li>
-    <li class="list__menu--text">Рыбные блюда</li>
-    <li class="list__menu--text">Гриль меню</li>
-    <li class="list__menu--text">Фирменные блюда</li>
-    <li class="list__menu--text">Напитки</li>
-  </ul>
+<div class="categories-desktop">
+  <div class="category">Холодные закуски</div>
+  <div class="category">Горячие закуски</div>
+  <div class="category">Мясные блюда</div>
+  <div class="category">Супы</div>
+  <div class="category">Рыбные блюда</div>
+  <div class="category">Гриль меню</div>
+  <div class="category">Фирменные блюда</div>
+  <div class="category">Напитки</div>
+</div>
+<div class="categories-tablet">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Холодные закуски</div>
+      <div class="swiper-slide">Горячие закуски</div>
+      <div class="swiper-slide">Мясные блюда</div>
+      <div class="swiper-slide">Супы</div>
+      <div class="swiper-slide">Рыбные блюда</div>
+      <div class="swiper-slide">Гриль меню</div>
+      <div class="swiper-slide">Фирменные блюда</div>
+      <div class="swiper-slide">Напитки</div>
+    </div>
+  </div>
+</div>
   <div class="seporator"></div>
   <div class="category">
     <div class="category__rect"></div>
@@ -71,7 +113,7 @@
       <div class="swiper-slide">
         <img
           class="swiper-slide__img0"
-          src="./public/IMG/menu.svg"
+          src="./public/IMG/menu.png"
           alt="menu"
         />
         <ul class="swiper__description">
@@ -89,7 +131,7 @@
       <div class="swiper-slide">
         <img
           class="swiper-slide__img0"
-          src="./public/IMG/menu.svg"
+          src="./public/IMG/menu.png"
           alt="menu"
         />
         <ul class="swiper__description">
@@ -107,7 +149,7 @@
       <div class="swiper-slide">
         <img
           class="swiper-slide__img0"
-          src="./public/IMG/menu.svg"
+          src="./public/IMG/menu.png"
           alt="menu"
         />
         <ul class="swiper__description">
@@ -125,7 +167,7 @@
       <div class="swiper-slide">
         <img
           class="swiper-slide__img0"
-          src="./public/IMG/menu.svg"
+          src="./public/IMG/menu.png"
           alt="menu"
         />
         <ul class="swiper__description">
@@ -143,7 +185,7 @@
       <div class="swiper-slide">
         <img
           class="swiper-slide__img0"
-          src="./public/IMG/menu.svg"
+          src="./public/IMG/menu.png"
           alt="menu"
         />
         <ul class="swiper__description">
@@ -171,7 +213,7 @@
       <div class="swiper-slide">
         <img
           class="swiper-slide__img0"
-          src="./public/IMG/menu.svg"
+          src="./public/IMG/menu.png"
           alt="menu"
         />
         <ul class="swiper__description">
@@ -189,7 +231,7 @@
       <div class="swiper-slide">
         <img
           class="swiper-slide__img0"
-          src="./public/IMG/menu.svg"
+          src="./public/IMG/menu.png"
           alt="menu"
         />
         <ul class="swiper__description">
@@ -207,7 +249,7 @@
       <div class="swiper-slide">
         <img
           class="swiper-slide__img0"
-          src="./public/IMG/menu.svg"
+          src="./public/IMG/menu.png"
           alt="menu"
         />
         <ul class="swiper__description">
@@ -225,7 +267,7 @@
       <div class="swiper-slide">
         <img
           class="swiper-slide__img0"
-          src="./public/IMG/menu.svg"
+          src="./public/IMG/menu.png"
           alt="menu"
         />
         <ul class="swiper__description">
@@ -243,7 +285,7 @@
       <div class="swiper-slide">
         <img
           class="swiper-slide__img0"
-          src="./public/IMG/menu.svg"
+          src="./public/IMG/menu.png"
           alt="menu"
         />
         <ul class="swiper__description">
@@ -271,7 +313,7 @@
       <div class="swiper-slide">
         <img
           class="swiper-slide__img0"
-          src="./public/IMG/menu.svg"
+          src="./public/IMG/menu.png"
           alt="menu"
         />
         <ul class="swiper__description">
@@ -289,7 +331,7 @@
       <div class="swiper-slide">
         <img
           class="swiper-slide__img0"
-          src="./public/IMG/menu.svg"
+          src="./public/IMG/menu.png"
           alt="menu"
         />
         <ul class="swiper__description">
@@ -307,7 +349,7 @@
       <div class="swiper-slide">
         <img
           class="swiper-slide__img0"
-          src="./public/IMG/menu.svg"
+          src="./public/IMG/menu.png"
           alt="menu"
         />
         <ul class="swiper__description">
@@ -325,7 +367,7 @@
       <div class="swiper-slide">
         <img
           class="swiper-slide__img0"
-          src="./public/IMG/menu.svg"
+          src="./public/IMG/menu.png"
           alt="menu"
         />
         <ul class="swiper__description">
@@ -343,7 +385,7 @@
       <div class="swiper-slide">
         <img
           class="swiper-slide__img0"
-          src="./public/IMG/menu.svg"
+          src="./public/IMG/menu.png"
           alt="menu"
         />
         <ul class="swiper__description">
@@ -429,7 +471,10 @@
     </ul>
   </div>
 </body>
+<script src="./src/preloader.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="./src/Swiper.js"></script>
 <script src="./src/main.js"></script>
+<script src="./src/slider.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </html>

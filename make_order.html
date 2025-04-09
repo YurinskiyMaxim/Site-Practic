@@ -13,7 +13,6 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
   <link rel="stylesheet" href="./src/swiper.css">
-  <link rel="stylesheet" href="./src/style_basket.css">
 </head>
 <body>
   <div id="header">
@@ -77,16 +76,16 @@
         <div class="pane">
             <label class="label">
                 <span>Доставка</span>
-                <input id="left" class="input" name="radio" type="radio">
+                <input id="first" class="input" name="radio1" type="radio">
             </label>
             <label class="label">
                 <span>Самовывоз</span>
-                <input id="middle" class="input" checked="checked" name="radio" type="radio">
+                <input id="last" class="input" checked="checked" name="radio1" type="radio">
             </label>
             <span class="selection"></span>
         </div>
       </div>
-      <div class="dostavka__time">
+      <div class="dostavka__info--time">
         <div><img src="./public/icons/clock.svg" alt=""></div>
         <div>Доставим через  1 час 30 минут</div>
       </div>
@@ -123,15 +122,15 @@
       <div class="pane2">
           <label class="label2">
               <span>Оплата онлайн</span>
-              <input id="left" class="input" name="radio" type="radio">
+              <input id="first" class="input" name="radio2" type="radio">
           </label>
           <label class="label2">
               <span>Курьеру картой</span>
-              <input id="middle" class="input" checked="checked" name="radio" type="radio">
+              <input id="middle" class="input" checked="checked" name="radio2" type="radio">
           </label>
           <label class="label2">
             <span>Наличными</span>
-            <input id="middle" class="input" checked="checked" name="radio" type="radio">
+            <input id="last" class="input" checked="checked" name="radio2" type="radio">
         </label>
           <span class="selection2"></span>
       </div>
@@ -140,8 +139,59 @@
       <input type="number" placeholder="Сдача с">
     </div>
   </div>
-  <div></div>
-  <div></div>
+  <div class="dostavka__time">
+    <div class="dostavka__time--zagol">4. Когда доставить</div>
+    <div class="container3">
+      <div class="pane3">
+          <label class="label3">
+              <span>В ближайшее время</span>
+              <input id="first" class="input" name="radio3" type="radio">
+          </label>
+          <label class="label3">
+              <span>Ко времени</span>
+              <input id="last" class="input" checked="checked" name="radio3" type="radio">
+          </label>
+            <span class="selection3"></span>
+      </div>
+      <div class="time-picker-wrapper">
+        <input type="text" class="input__time" placeholder="Укажите время" readonly>
+        <input type="time" class="time-native">
+      </div>
+    </div>
+    <div class="person__quantity--cont">
+      <div class="person__quantity--text">Кол-во персон</div>
+      <div class="counter">
+        <button class="mines"></button>
+          <input class="value" type="number" value="0" min="0" max="8" readonly>
+        <button class="plus"></button>
+    </div>
+    </div>
+    <div class="callback-section">
+      <div class="callback-section__text">Хотите мы позвоним?</div>
+      <label class="callback-option">
+        <input type="radio" name="callback" value="no" checked>
+        <span class="custom-radio"></span>
+        <span class="option-text">Не перезвонивать</span>
+      </label>
+      <label class="callback-option">
+        <input type="radio" name="callback" value="yes">
+        <span class="custom-radio"></span>
+        <span class="option-text">Попробуется звонок оператора</span>
+      </label>
+    </div>
+  </div>
+  <div class="order-footer">
+    <div class="agree-wrapper">
+      <label class="checkbox-label">
+        <input type="checkbox" name="agree" required>
+        <span class="custom-checkbox"></span>
+      </label>
+      <span class="agree-text">Я согласен на обработку моих перс. данных в соответствии с <span class="terms">Условиями</span></span>
+    </div>
+    <button type="submit" class="submit-order">Оформить заказ</button>
+  </div>
+  
+  
   <div class="bottom">
     <button class="bottom__button"> <img src="./public/IMG/Arrow.svg" alt="UP"></button>
     <ul class="bottom__text1">
@@ -169,4 +219,5 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="./src/Swiper.js"></script>
 <script src="./src/main.js"></script>
+<script src="./src/time__select.js"></script>
 </html>

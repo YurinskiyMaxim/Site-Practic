@@ -25,36 +25,36 @@
   background: linear-gradient(90deg, rgb(73, 69, 68), rgb(80, 75, 74));
   display: flex !important;
   flex-direction: column;
-  align-items: start  ;
-  margin:0 10px 50px 10px;
+  align-items: start;
+  margin: 0 10px 50px 10px;
 }
-.swiper__description{
-  font-family: 'Gilroy';
+.swiper__description {
+  font-family: "Gilroy";
   padding: 0%;
   padding-left: 20px;
   list-style: none;
   align-items: center;
 }
-.swiper__description--first{
+.swiper__description--first {
   display: flex;
-  font-family: 'Gilroy';
+  font-family: "Gilroy";
   font-size: 22px;
   font-weight: bold;
   justify-content: space-between;
 }
-.swiper__description--first1{
+.swiper__description--first1 {
   font-size: 12px;
   font-weight: 100;
   align-content: end;
 }
-.swiper__description--second{
+.swiper__description--second {
   font-size: 13px;
   margin-top: 5px;
   font-weight: lighter;
   width: 290px;
   height: 34px;
 }
-.swiper__buy{
+.swiper__buy {
   padding-left: 20px;
   display: flex;
   flex-direction: row;
@@ -64,8 +64,11 @@
   font-weight: bold;
   width: 289px;
 }
-.swiper-slide__img0{
+.swiper-slide__img0 {
   cursor: pointer;
+  width: 325px;
+  height: 227px;
+  border-radius: 10px 10px 0 0;
 }
 .swiper-slide__button {
   transition: 0.5s;
@@ -84,12 +87,12 @@
   height: 44px;
   cursor: pointer;
 }
-.swiper-slide__button:hover{
-  transition: 0.5s;
-  transform: scale(0.95);
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
+.swiper-slide__button:hover {
+  background: linear-gradient(135deg, rgb(85, 120, 90), rgb(100, 145, 106));
+}
+
+.swiper-slide__button:active{
+  transform: scale(0.98);
 }
 
 .swiper-pagination-bullet {
