@@ -1,15 +1,16 @@
-/* Общие стили */
-.category, .swiper-slide {
+/* CSS */
+.category, .slider-slide {
   padding: 12px 24px;
-  background: #f5f5f5;
+
   border-radius: 24px;
   white-space: nowrap;
   display: inline-block;
   margin: 5px;
   font-size: 16px;
+  cursor: pointer;
 }
 
-/* Версия для ПК */
+/* Десктопная версия */
 .categories-desktop {
   display: flex;
   flex-wrap: wrap;
@@ -21,7 +22,7 @@
   display: none;
 }
 
-/* Версия для планшетов */
+/* Планшетная версия (768px) */
 @media (max-width: 768px) {
   .categories-desktop {
     display: none;
@@ -29,17 +30,19 @@
   
   .categories-tablet {
     display: block;
-    padding: 0 20px;
+    padding: 0 15px;
   }
   
-  .swiper-container {
+  .slider-container {
     overflow: hidden;
+    position: relative;
   }
   
-  .swiper-slide {
+  .slider-slide {
     width: auto !important;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    user-select: none;
   }
 }

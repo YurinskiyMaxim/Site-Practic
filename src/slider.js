@@ -1,15 +1,26 @@
+// JavaScript
 document.addEventListener('DOMContentLoaded', function() {
-  if (window.innerWidth <= 992) {
-    const swiper = new Swiper('.swiper-container', {
-      freeMode: true,
+  if (window.innerWidth <= 768) {
+    const swiper = new Swiper('.slider-container', {
       slidesPerView: 'auto',
-      spaceBetween: 15,
+      freeMode: true,
       mousewheel: {
         forceToAxis: true,
       },
-      touchEventsTarget: 'container',
+      touchStartPreventDefault: false,
+      resistanceRatio: 0,
+      grabCursor: true,
       preventInteractionOnTransition: true,
-      resistance: false,
+      on: {
+        init: function() {
+          this.enable();
+        }
+      }
     });
+    
+    // Включаем обработку касаний
+    document.querySelector('.slider-container').addEventListener('touchstart', function(e) {
+      e.preventDefault();
+    }, { passive: false });
   }
 });
