@@ -71,11 +71,12 @@ html {
   flex-direction: row;
   background: linear-gradient(90deg, rgb(73, 69, 68), rgb(80, 75, 74));
   width: 100% auto;
+  box-sizing: border-box;
   height: 399px;
   border-radius: 17px;
   margin: 27px 112px 50px 112px;
-  @media (max-width: 1440px) {
-    flex-direction: column;
+  @media (min-width: 1440px) {
+    flex-direction: row;
     height: auto;
   }
   @media (max-width: 768px) {
@@ -84,15 +85,12 @@ html {
 }
 .kartochka--info {
   width: 100%;
+  max-width: 619px;
 }
 .kartochka--img {
   border-radius: 17px 0 0 17px;
   box-sizing: border-box;
-  @media (max-width: 1440px) {
-    border-radius: 0;
-    width: 100%;
-    height: auto;
-  }
+
 }
 .kartochka__name--description {
   display: flex;
@@ -101,6 +99,8 @@ html {
   font-size: 25px;
   font-family: "gilroy";
   font-weight: bold;
+  width: 100% auto;
+  box-sizing: border-box;
   padding: 0;
   flex-direction: column;
   @media (max-width: 768px) {

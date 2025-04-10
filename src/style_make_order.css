@@ -91,6 +91,87 @@ input:focus {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
 }
+
+.phone-input-wrapper {
+  width: 100%;
+}
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.phone-input.active {
+  border-color: #72A479;
+}
+
+.country-code {
+  background: none;
+  color: white;
+  border: none;
+  padding: 20px;
+  border-radius: 10px 0 0 10px;
+  appearance: none;
+  cursor: pointer;
+  font-family: "Gilroy";
+  font-size: 16px;
+}
+.country-code:focus{
+  border: none;
+  outline: none;
+}
+
+.country-code option {
+  background: #333;
+  color: white;
+}
+
+.phone-field {
+  flex: 1;
+  border: none;
+  background: none;
+  color: white;
+  padding: 20px;
+  font-family: "Gilroy";
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.phone-field::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Темная тема для выпадающего списка */
+select.country-code::-ms-expand {
+  display: none;
+}
+
+select.country-code {
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='white' stroke-width='2'/%3E%3C/ssvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  padding-right: 40px;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 375px) {
+  .country-code,
+  .phone-field {
+    padding: 15px;
+    font-size: 14px;
+  }
+  
+  select.country-code {
+    background-position: right 10px center;
+    padding-right: 30px;
+  }
+}
+
+
 .dostavka_info {
   display: flex;
   width: 100% auto;
@@ -635,4 +716,218 @@ input:focus {
 
 .submit-order:active {
   transform: scale(0.98);
+}
+
+/* Адаптация 768px */
+@media (max-width: 768px) {
+  .to_basket {
+    margin: 30px 0 25px 24px;
+  }
+
+  .make_order {
+    margin-left: 24px;
+  }
+
+  .konkact_info,
+  .dostavka_info,
+  .dostavka__payment,
+  .dostavka__time,
+  .order-footer {
+    margin: 30px 24px 0;
+    padding: 25px 20px;
+  }
+
+  .konkact_info__inputs,
+  .dostavka__adres--inputs1,
+  .dostavka__adres--inputs2,
+  .dostavka__adres--inputs3 {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .dostavka__adres--all_inputs,
+  .dostavka__adres--inputs1-1-cont,
+  .dostavka__adres--inputs1-2-cont,
+  .dostavka__adres--inputs2-1-cont,
+  .dostavka__adres--inputs2-2-cont,
+  .dostavka__adres--inputs2-3-cont {
+    width: 100% !important;
+  }
+
+  .pane,
+  .pane2,
+  .pane3 {
+    width: 100% !important;
+    height: 55px;
+  }
+
+  .label,
+  .label2,
+  .label3 {
+    font-size: 15px;
+    padding: 0 10px;
+    white-space: nowrap;
+  }
+
+  .container3 {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .time-picker-wrapper {
+    width: 100%;
+  }
+
+  .order-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .submit-order {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .selection {
+    width: 50% !important;
+  }
+  
+  .selection2 {
+    width: 33.333% !important;
+  }
+  
+  .selection3 {
+    width: 50% !important;
+  }
+
+  .label:nth-child(1):has(input:checked) ~ .selection,
+  .label3:nth-child(1):has(input:checked) ~ .selection3 {
+    transform: translateX(0%);
+  }
+
+  .label:nth-child(2):has(input:checked) ~ .selection,
+  .label3:nth-child(2):has(input:checked) ~ .selection3 {
+    transform: translateX(100%);
+  }
+
+  .label2:nth-child(1):has(input:checked) ~ .selection2 {
+    transform: translateX(0%);
+  }
+
+  .label2:nth-child(2):has(input:checked) ~ .selection2 {
+    transform: translateX(100%);
+  }
+
+  .label2:nth-child(3):has(input:checked) ~ .selection2 {
+    transform: translateX(200%);
+  }
+}
+
+/* Адаптация 375px */
+@media (max-width: 375px) {
+  * {
+    font-size: 14px;
+  }
+
+  .to_basket {
+    margin: 20px 0 15px 15px;
+  }
+
+  .make_order {
+    margin-left: 15px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .make_order__seporator {
+    height: 22px;
+    margin-right: 8px;
+  }
+
+  .make_order__text {
+    font-size: 18px;
+  }
+
+  .konkact_info,
+  .dostavka_info,
+  .dostavka__payment,
+  .dostavka__time,
+  .order-footer {
+    margin: 25px 15px 0;
+    padding: 18px;
+  }
+
+  input {
+    padding: 12px 0 12px 15px;
+    font-size: 13px;
+  }
+
+  .pane,
+  .pane2,
+  .pane3 {
+    height: 48px;
+  }
+
+  .label,
+  .label2,
+  .label3 {
+    font-size: 13px;
+    padding: 0 8px;
+  }
+
+  .person__quantity--cont {
+    padding: 12px;
+    gap: 20px;
+  }
+
+  .value {
+    font-size: 15px;
+    width: 35px;
+  }
+
+  .custom-radio {
+    width: 16px;
+    height: 16px;
+  }
+
+  .submit-order {
+    height: 42px;
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .time-picker-wrapper {
+    height: 48px;
+  }
+
+  .input__time {
+    font-size: 13px;
+    padding: 12px 0 12px 15px;
+  }
+
+  .selection {
+    width: 50% !important;
+  }
+  
+  .selection2 {
+    width: 33.33% !important;
+  }
+  
+  .selection3 {
+    width: 50% !important;
+  }
+
+  .label:nth-child(2):has(input:checked) ~ .selection,
+  .label3:nth-child(2):has(input:checked) ~ .selection3 {
+    transform: translateX(100%);
+  }
+
+  .label2:nth-child(2):has(input:checked) ~ .selection2 {
+    transform: translateX(100%);
+  }
+
+  .label2:nth-child(3):has(input:checked) ~ .selection2 {
+    transform: translateX(200%);
+  }
 }

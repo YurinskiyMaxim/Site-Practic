@@ -13,6 +13,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
   <link rel="stylesheet" href="./src/swiper.css">
+  <link rel="stylesheet" href="./src/slider.css">
 </head>
 <body>
   <div id="header">
@@ -50,6 +51,105 @@
     </button>
   </div>
   <div class="seporator"></div>
+  <div class="main__menu--slider">
+    <div class="main__menu--slider--item">
+      <input
+        class="main__menu--slider-radio-button"
+        type="radio"
+        id="radio_brands"
+        name="selector"
+        checked
+      />
+      <label for="radio_brands" class="main__menu--slider--item-label">
+        <p class="pshka">Холодные закуски</p>
+      </label>
+    </div>
+    <div class="main__menu--slider--item">
+      <input
+        class="main__menu--slider-radio-button"
+        type="radio"
+        id="radio_brands"
+        name="selector"
+        checked
+      />
+      <label for="radio_brands" class="main__menu--slider--item-label">
+        <p class="pshka">Горячие закуски</p>
+      </label>
+    </div>
+    <div class="main__menu--slider--item">
+      <input
+        class="main__menu--slider-radio-button"
+        type="radio"
+        id="radio_brands"
+        name="selector"
+        checked
+      />
+      <label for="radio_brands" class="main__menu--slider--item-label">
+        <p class="pshka">Мясные блюда</p>
+      </label>
+    </div>
+    <div class="main__menu--slider--item">
+      <input
+        class="main__menu--slider-radio-button"
+        type="radio"
+        id="radio_brands"
+        name="selector"
+        checked
+      />
+      <label for="radio_brands" class="main__menu--slider--item-label">
+        <p class="pshka">Супы</p>
+      </label>
+    </div>
+    <div class="main__menu--slider--item">
+      <input
+        class="main__menu--slider-radio-button"
+        type="radio"
+        id="radio_brands"
+        name="selector"
+        checked
+      />
+      <label for="radio_brands" class="main__menu--slider--item-label">
+        <p class="pshka">Рыбные блюда</p>
+      </label>
+    </div>
+    <div class="main__menu--slider--item">
+      <input
+        class="main__menu--slider-radio-button"
+        type="radio"
+        id="radio_brands"
+        name="selector"
+        checked
+      />
+      <label for="radio_brands" class="main__menu--slider--item-label">
+        <p class="pshka">Гриль меню</p>
+      </label>
+    </div>
+    <div class="main__menu--slider--item">
+      <input
+        class="main__menu--slider-radio-button"
+        type="radio"
+        id="radio_brands"
+        name="selector"
+        checked
+      />
+      <label for="radio_brands" class="main__menu--slider--item-label">
+        <p class="pshka">Фирменные блюда</p>
+      </label>
+    </div>
+    <div class="main__menu--slider--item">
+      <input
+        class="main__menu--slider-radio-button"
+        type="radio"
+        id="radio_brands"
+        name="selector"
+        checked
+      />
+      <label for="radio_brands" class="main__menu--slider--item-label">
+        <p class="pshka">Напитки</p>
+      </label>
+    </div>
+  </div>
+  <div class="seporator"></div>
   <div class="to_basket">
     <div><img src="./public/IMG/Arrow Back.svg" alt=""></div>
     <div class="to_basket__text">в корзину</div>
@@ -65,7 +165,22 @@
         <input class="konkact_info__input1" type="text" placeholder="Имя*">
       </div>
       <div class="input__conteiner2">
-        <input class="konkact_info__input2" type="text" placeholder="Телефон*">
+        <div class="phone-input-wrapper">
+          <div class="phone-input" id="phoneContainer">
+            <select class="country-code">
+              <option value="7">+7</option>
+              <option value="1">+1</option>
+              <option value="44">+44</option>
+              <option value="49">+49</option>
+            </select>
+            <input 
+              type="tel"
+              class="phone-field"
+              placeholder="Телефон*"
+              readonly
+            >
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -216,6 +331,8 @@
     </ul>
   </div>
 </body>
+<script src="https://unpkg.com/imask"></script>
+<script src="./src/Telefon.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="./src/Swiper.js"></script>
 <script src="./src/main.js"></script>
