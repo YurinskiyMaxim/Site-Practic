@@ -9,10 +9,7 @@
   <link rel="stylesheet" href="./src/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./src/swiper.css">
   <link rel="stylesheet" href="./src/slider.css">
 </head>
@@ -42,67 +39,140 @@
     </div>
   </div>
   <div id="header">
-    
-    <div id="header__phone">
-      <ul class="burger">
-        <li><img src="./public/IMG/burger.svg" alt=""></li>
-        <li>меню</li>
-      </ul>
-      <div class="logo2">SavoryBites</div>
-      <button class="basket2">
-        <img class="basket2__img" src="./public/IMG/basket.svg" alt="">
-        <div class="basket__seporation2"></div>
-        корзина
-      </button>
-    </div>
-    <div class="logo">SavoryBites</div>
-    <div class="search__bar">
-      <img class="search__bar--location" src="./public/icons/Location.svg" alt="">
-      <input class="address" placeholder="Введите адрес доставки"></input>
-      <img class="search__bar--search" src="./public/icons/Search.svg" alt="">
-  </div>
-    <div class="calling">
-      <div class="call__icon"><img src="./public/icons/Calling.svg" alt=""></div>
-      <div class="contact">
-        <ul class="contact__text">
-          <li>Контакты:</li>
-          <li class="number">+7 (914) 137-82-02</li>
-        </ul>
-      </div>
-    </div>
-    <button class="basket">
-      <div class="basket__text">Корзина</div>
-      <div class="basket__seporation"></div>
-      <div class="basket__number">0</div>
+  <div id="header__phone">
+    <ul class="burger">
+      <li><img src="./public/IMG/burger.svg" alt=""></li>
+      <li>меню</li>
+    </ul>
+    <div class="logo2">SavoryBites</div>
+    <button class="basket2">
+      <img class="basket2__img" src="./public/IMG/basket.svg" alt="">
+      <div class="basket__seporation2"></div>
+      корзина
     </button>
   </div>
-  <div class="seporator"></div>
-  <div class="banner"><img class="banner__img" src="./public/icons/баннер 1.svg" alt=""><img class="banner__img2" src="./public/icons/баннер 2.svg" alt=""></div>
-<div class="categories-desktop">
-  <div class="category">Холодные закуски</div>
-  <div class="category">Горячие закуски</div>
-  <div class="category">Мясные блюда</div>
-  <div class="category">Супы</div>
-  <div class="category">Рыбные блюда</div>
-  <div class="category">Гриль меню</div>
-  <div class="category">Фирменные блюда</div>
-  <div class="category">Напитки</div>
+  <div class="logo">SavoryBites</div>
+  <div class="search__bar">
+    <img class="search__bar--location" src="./public/icons/Location.svg" alt="">
+    <input class="address" placeholder="Введите адрес доставки"></input>
+    <img class="search__bar--search" src="./public/icons/Search.svg" alt="">
 </div>
-<div class="categories-tablet">
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">Холодные закуски</div>
-      <div class="swiper-slide">Горячие закуски</div>
-      <div class="swiper-slide">Мясные блюда</div>
-      <div class="swiper-slide">Супы</div>
-      <div class="swiper-slide">Рыбные блюда</div>
-      <div class="swiper-slide">Гриль меню</div>
-      <div class="swiper-slide">Фирменные блюда</div>
-      <div class="swiper-slide">Напитки</div>
+  <div class="calling">
+    <div class="call__icon"><img src="./public/icons/Calling.svg" alt=""></div>
+    <div class="contact">
+      <ul class="contact__text">
+        <li>Контакты:</li>
+        <li class="number">+7 (914) 137-82-02</li>
+      </ul>
     </div>
   </div>
+  <button class="basket">
+    <div class="basket__text">Корзина</div>
+    <div class="basket__seporation"></div>
+    <div class="basket__number">0</div>
+  </button>
 </div>
-  <div class="seporator"></div>
+<div class="seporator"></div>
+<div class="banner"><img class="banner__img" src="./public/icons/баннер 1.svg" alt=""><img class="banner__img2" src="./public/icons/баннер 2.svg" alt=""></div>
+<div class="main__menu--slider">
+  <div class="main__menu--slider--item">
+    <input
+      class="main__menu--slider-radio-button"
+      type="radio"
+      id="radio_brands"
+      name="selector"
+      checked
+    />
+    <label for="radio_brands" class="main__menu--slider--item-label">
+      <p class="pshka">Холодные закуски</p>
+    </label>
+  </div>
+  <div class="main__menu--slider--item">
+    <input
+      class="main__menu--slider-radio-button"
+      type="radio"
+      id="radio_brands"
+      name="selector"
+      checked
+    />
+    <label for="radio_brands" class="main__menu--slider--item-label">
+      <p class="pshka">Горячие закуски</p>
+    </label>
+  </div>
+  <div class="main__menu--slider--item">
+    <input
+      class="main__menu--slider-radio-button"
+      type="radio"
+      id="radio_brands"
+      name="selector"
+      checked
+    />
+    <label for="radio_brands" class="main__menu--slider--item-label">
+      <p class="pshka">Мясные блюда</p>
+    </label>
+  </div>
+  <div class="main__menu--slider--item">
+    <input
+      class="main__menu--slider-radio-button"
+      type="radio"
+      id="radio_brands"
+      name="selector"
+      checked
+    />
+    <label for="radio_brands" class="main__menu--slider--item-label">
+      <p class="pshka">Супы</p>
+    </label>
+  </div>
+  <div class="main__menu--slider--item">
+    <input
+      class="main__menu--slider-radio-button"
+      type="radio"
+      id="radio_brands"
+      name="selector"
+      checked
+    />
+    <label for="radio_brands" class="main__menu--slider--item-label">
+      <p class="pshka">Рыбные блюда</p>
+    </label>
+  </div>
+  <div class="main__menu--slider--item">
+    <input
+      class="main__menu--slider-radio-button"
+      type="radio"
+      id="radio_brands"
+      name="selector"
+      checked
+    />
+    <label for="radio_brands" class="main__menu--slider--item-label">
+      <p class="pshka">Гриль меню</p>
+    </label>
+  </div>
+  <div class="main__menu--slider--item">
+    <input
+      class="main__menu--slider-radio-button"
+      type="radio"
+      id="radio_brands"
+      name="selector"
+      checked
+    />
+    <label for="radio_brands" class="main__menu--slider--item-label">
+      <p class="pshka">Фирменные блюда</p>
+    </label>
+  </div>
+  <div class="main__menu--slider--item">
+    <input
+      class="main__menu--slider-radio-button"
+      type="radio"
+      id="radio_brands"
+      name="selector"
+      checked
+    />
+    <label for="radio_brands" class="main__menu--slider--item-label">
+      <p class="pshka">Напитки</p>
+    </label>
+  </div>
+</div>
+<div class="seporator"></div>
   <div class="category">
     <div class="category__rect"></div>
     <div>Холодные закуски</div>
@@ -474,6 +544,6 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="./src/Swiper.js"></script>
 <script src="./src/main.js"></script>
-<script src="./src/slider.js"></script>
+<script src="./src/swiper2.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </html>

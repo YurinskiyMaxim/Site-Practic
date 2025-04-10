@@ -1,48 +1,72 @@
-/* CSS */
-.category, .slider-slide {
-  padding: 12px 24px;
-
-  border-radius: 24px;
-  white-space: nowrap;
-  display: inline-block;
-  margin: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-/* Десктопная версия */
-.categories-desktop {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-}
-
-.categories-tablet {
-  display: none;
-}
-
-/* Планшетная версия (768px) */
-@media (max-width: 768px) {
-  .categories-desktop {
+main__menu--slider::-webkit-scrollbar {
+    width: 0;
+  }
+  .pshka{
+    margin: 0;
+  }
+  .main__menu--slider {
+    padding: 0 16px;
+    margin-top: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+    max-height: 50px; 
+    gap: 26px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 18px;
+    position: relative;
+    overflow: auto;
+    justify-content: space-between;
+    @media (min-width: 1034px) {
+      margin-bottom: 15px;
+      padding: 0 69px;
+    }
+  }
+  
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+  
+  .main__menu--slider--item {
+    padding: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    white-space: nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #7e7e82;
+    -webkit-transition: 2s;
+    transition: 2s;
+  }
+  
+  .main__menu--slider--item-label {
+    padding: 0px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0;
+  }
+  
+  
+  .main__menu--slider-radio-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     display: none;
   }
   
-  .categories-tablet {
-    display: block;
-    padding: 0 15px;
+  .mainmenu--slider-radio-button:checked + .mainmenu--slider--item-label {
+    background: #ffffff;
+    border-radius: 6px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 3px solid #d9fff5;
   }
   
-  .slider-container {
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .slider-slide {
-    width: auto !important;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    user-select: none;
-  }
-}

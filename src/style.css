@@ -105,7 +105,7 @@ input[type="number"]::-webkit-inner-spin-button {
   background: linear-gradient(135deg, rgb(85, 120, 90), rgb(100, 145, 106));
 }
 
-.basket2:active{
+.basket2:active {
   transform: scale(0.98);
 }
 
@@ -227,7 +227,7 @@ input[type="number"]::-webkit-inner-spin-button {
   background: linear-gradient(135deg, rgb(85, 120, 90), rgb(100, 145, 106));
 }
 
-.basket:active{
+.basket:active {
   transform: scale(0.98);
 }
 
@@ -240,6 +240,7 @@ input[type="number"]::-webkit-inner-spin-button {
   animation: ani 2s forwards;
   opacity: 0;
   animation: ani 5s forwards;
+  height: auto;
 }
 @keyframes ani {
   0% {
@@ -431,7 +432,7 @@ input[type="number"]::-webkit-inner-spin-button {
   background: linear-gradient(135deg, rgb(85, 120, 90), rgb(100, 145, 106));
 }
 
-.bronirovanie__button:active{
+.bronirovanie__button:active {
   transform: scale(0.98);
 }
 
