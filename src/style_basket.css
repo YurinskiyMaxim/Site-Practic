@@ -191,12 +191,12 @@ html {
   padding: 0;
   border: 0;
   font-size: 18px;
-  width: 42px;
-  padding-left: 16px;
+  width: 100% auto;
+  box-sizing: border-box;
+  text-align: center;
   color: white;
   background: none;
   box-sizing: border-box;
-  -webkit-appearance: none;
 }
 .plus,
 .mines {
@@ -528,4 +528,23 @@ html {
 
 .make__order:hover {
   background: linear-gradient(135deg, rgb(85, 120, 90), rgb(100, 145, 106));
+}
+
+
+.empty-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.empty-cart img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.empty-cart p {
+  font-size: 18px;
+  color: #72a479;
 }
