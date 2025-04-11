@@ -72,25 +72,50 @@ html {
   background: linear-gradient(90deg, rgb(73, 69, 68), rgb(80, 75, 74));
   width: 100% auto;
   box-sizing: border-box;
-  height: 399px;
+  height: auto;
   border-radius: 17px;
   margin: 27px 112px 50px 112px;
   @media (min-width: 1440px) {
-    flex-direction: row;
     height: auto;
   }
   @media (max-width: 768px) {
     margin: 27px 0 50px 0;
+  }
+  @media (max-width: 375) {
+    flex-direction: column;
   }
 }
 .kartochka--info {
   width: 100%;
   max-width: 619px;
 }
-.kartochka--img {
+.kartochka--img,
+.kartochka--img img {
+  height: 399px;
   border-radius: 17px 0 0 17px;
-  box-sizing: border-box;
+}
 
+@media (max-width: 1440px) {
+  .kartochka--img,
+  .kartochka--img img {
+    height: 399px;
+  }
+}
+
+@media (max-width: 768px) {
+  .kartochka--img,
+  .kartochka--img img {
+    height: 340px;
+  }
+}
+
+@media (max-width: 375px) {
+  .kartochka--img,
+  .kartochka--img img {
+    width: auto;
+    max-height: 262px;
+    border-radius: 17px 17px 0 0;
+  }
 }
 .kartochka__name--description {
   display: flex;
@@ -107,6 +132,8 @@ html {
     align-items: center;
   }
 }
+
+
 .description2 {
   color: white;
   font-size: 14px;
@@ -244,5 +271,118 @@ html {
   margin-left: 50px;
   @media (max-width: 768px) {
     margin-left: 0;
+  }
+}
+
+@media (max-width: 1440px) {
+  .compound {
+    margin-right: 100px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .compound {
+    margin-right: 50px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .compound {
+    width: 90%;
+    margin: 30px auto 5px;
+    padding: 0 15px;
+  }
+  
+  .compound__name,
+  .compound__num {
+    gap: 8px;
+    text-align: center;
+  }
+  
+  .compound__num {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .kartochka {
+    flex-direction: column;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 10px;
+  }
+
+  .kartochka--img {
+    height: 277px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .kartochka--img img {
+    height: 277px;
+    border-radius: 10px 10px 0 0;
+    object-position: center;
+  }
+
+  .kartochka--info {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .kartochka__name--description {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .kartochka__name--description li:first-child {
+    font-size: 22px;
+  }
+
+  .description2 {
+    width: 100% !important;
+    font-size: 12px;
+  }
+
+  .weight {
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  .kartochka__button--price {
+    flex-direction: row-reverse;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .price {
+    margin-left: 0;
+    order: -1;
+  }
+
+  .nutrition-container {
+    margin: 15px 0 0 0;
+    padding: 0;
+  }
+
+  .compound {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .compound__name,
+  .compound__num {
+    flex-direction: row;
+    gap: 5px;
+    text-align: center;
+  }
+
+  .compound__num {
+    margin: 5px 0 0 0;
+  }
+
+  .kartochka__seporator {
+    margin: 10px 0;
   }
 }

@@ -1,3 +1,24 @@
+// Обработчик клика по карточкам товара
+document.querySelectorAll('.swiper-slide').forEach(slide => {
+  const img = slide.querySelector('img');
+  const button = slide.querySelector('.swiper-slide__button');
+  
+  // Обработчик клика по изображению
+  img.addEventListener('click', function() {
+      const productData = {
+          id: button.dataset.id,
+          name: button.dataset.name,
+          price: button.dataset.price,
+          image: button.dataset.image,
+          weight: button.dataset.weight,
+          description: slide.querySelector('.swiper__description--second').textContent
+      };
+      
+      localStorage.setItem('selectedProduct', JSON.stringify(productData));
+      window.location.href = 'kartochka.html';
+  });
+});
+
 const slides = document.querySelectorAll(".swiper-slide__img0");
 slides.forEach((slide) => {
   slide.addEventListener("click", () => {

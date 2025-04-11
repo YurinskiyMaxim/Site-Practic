@@ -67,6 +67,17 @@ class Cart {
 
 const cart = new Cart();
 
+// Обновление счетчика корзины
+function updateCartCounter() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  document.querySelectorAll('.basket-counter, .basket__number').forEach(element => {
+      element.textContent = cart.reduce((acc, item) => acc + item.quantity, 0);
+  });
+}
+
+// Инициализация корзины
+document.addEventListener('DOMContentLoaded', updateCartCounter);
+
 function showEmptyCartModal() {
   if (document.getElementById('emptyCartModal')) return;
 
@@ -308,3 +319,4 @@ function updateOrderSummary() {
   totalElement && (totalElement.textContent = `${totalPrice.toLocaleString()} ₽`);
   freeElement && (freeElement.textContent = `${toFree.toLocaleString()} ₽`);
 }
+

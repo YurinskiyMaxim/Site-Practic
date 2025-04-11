@@ -156,42 +156,38 @@
   </button>
   <div class="kartochka">
     <button class="go_back2">
-      <div class="go_back--icon"><img src="./public/IMG/Arrow Back2.svg" alt="Back"></div>
+        <div class="go_back--icon">
+            <img src="./public/IMG/Arrow Back2.svg" alt="Назад">
+        </div>
     </button>
-    <div class="kartochka--img"><img class="kartochka--img" src="./public/icons/kartochka.svg" alt=""></div>
-    <div class="kartochka--info">
-      <ul class="kartochka__name--description">
-        <li>Ягненок</li>
-        <li class="description2">помидор, сыр фета, масло подсолнечное, капуста пекинская, перец сладкий красный, огурцы, оливки без косточек</li>
-      </ul>
-      <div class="weight">Вес: 210 г</div>
-      <div class="kartochka__button--price">
-        <button class="kartochka__button">
-          <div>Корзина</div>
-          <div class="basket__seporation"></div>
-          <div><img src="./public/IMG/shopping-bag.svg" alt=""></div>
-        </button>
-        <div class="price">259 ₽</div>
-      </div>
-      <ul class="compound">
-        <ul class="compound__name">
-          <li>Белки</li>
-          <li>Жиры</li>
-          <li>Углеводы</li>
-          <li>Ккал</li>
-          <li class="compound__name--last">Вес</li>
-        </ul>
-        <div class="kartochka__seporator"></div>
-        <ul class="compound__num">
-          <li>17.23</li>
-          <li>7.63</li>
-          <li>22.35</li>
-          <li>234</li>
-          <li class="compound__num--last">210 г</li>
-        </ul>
-      </ul>
+    
+    <div class="kartochka--img">
+        <img src="" alt="Изображение товара">
     </div>
-  </div>
+    
+    <div class="kartochka--info">
+        <ul class="kartochka__name--description">
+            <li>Название товара</li>
+            <li class="description2">Описание товара</li>
+        </ul>
+        
+        <div class="weight">Вес: 225г</div>
+        
+        <div class="kartochka__button--price">
+            <button class="kartochka__button">
+                <div>Корзина</div>
+                <div class="basket__seporation"></div>
+                <div>
+                    <img src="./public/IMG/shopping-bag.svg" alt="Корзина">
+                </div>
+            </button>
+            <div class="price">999 ₽</div>
+        </div>
+        
+        <!-- Контейнер для БЖУ -->
+        <div class="nutrition-container"></div>
+    </div>
+</div>
   <div class="seporator"></div>
   <div class="category">
     <div class="category__rect"></div>
@@ -382,6 +378,7 @@
     </ul>
   </div>
   <script src="./src/cart.js"></script>
+  <script src="./src/Kartochka.js"></script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="./src/Swiper.js"></script>
