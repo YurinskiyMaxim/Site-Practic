@@ -56,7 +56,7 @@ backToTop.addEventListener("click", function (event) {
 const go_to_kard = document.querySelectorAll(".to_choose_dish");
 go_to_kard.forEach((go_to_kard) => {
   go_to_kard.addEventListener("click", () => {
-    window.location.href = "./Карточка.html";
+    window.location.href = "./index.html";
   });
 });
 

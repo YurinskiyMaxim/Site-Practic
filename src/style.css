@@ -217,12 +217,13 @@ input[type="number"]::-webkit-inner-spin-button {
   flex-direction: row;
   border: none;
   justify-content: space-between;
-  padding: 7px 13px 7px 24px;
+  padding: 7px 24px 7px 24px;
   font-weight: bold;
   @media (max-width: 730px) {
     display: none;
   }
 }
+
 .basket:hover {
   background: linear-gradient(135deg, rgb(85, 120, 90), rgb(100, 145, 106));
 }
@@ -595,4 +596,14 @@ input[type="number"]::-webkit-inner-spin-button {
   @media (max-width: 1024px) {
     width: 140px;
   }
+}
+
+
+
+
+.about__us{
+  width: auto;
+  height: auto;
+  font-weight: bold;
+  font-size: 14px;
 }
