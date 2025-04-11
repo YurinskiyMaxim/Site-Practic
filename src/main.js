@@ -1,9 +1,7 @@
-// Обработчик клика по карточкам товара
 document.querySelectorAll('.swiper-slide').forEach(slide => {
   const img = slide.querySelector('img');
   const button = slide.querySelector('.swiper-slide__button');
-  
-  // Обработчик клика по изображению
+
   img.addEventListener('click', function() {
       const productData = {
           id: button.dataset.id,

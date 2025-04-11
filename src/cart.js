@@ -47,6 +47,7 @@ class Cart {
 
   getTotalPrice() {
     return this.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    
   }
 
   updateCartCounters() {
@@ -67,7 +68,6 @@ class Cart {
 
 const cart = new Cart();
 
-// Обновление счетчика корзины
 function updateCartCounter() {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
   document.querySelectorAll('.basket-counter, .basket__number').forEach(element => {
@@ -75,7 +75,6 @@ function updateCartCounter() {
   });
 }
 
-// Инициализация корзины
 document.addEventListener('DOMContentLoaded', updateCartCounter);
 
 function showEmptyCartModal() {
@@ -176,7 +175,6 @@ function showEmptyCartModal() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Обработка параметра скролла
   const urlParams = new URLSearchParams(window.location.search);
   const scrollValue = urlParams.get('scroll');
   
@@ -185,17 +183,14 @@ document.addEventListener('DOMContentLoaded', () => {
       top: parseInt(scrollValue),
       behavior: 'smooth'
     });
-    
-    // Очищаем URL от параметра
+
     const cleanUrl = new URL(window.location);
     cleanUrl.searchParams.delete('scroll');
     window.history.replaceState({}, '', cleanUrl);
   }
 
-  // Инициализация корзины
   cart.updateCartCounters();
 
-  // Обработчик добавления в корзину
   document.body.addEventListener('click', e => {
     const button = e.target.closest('.swiper-slide__button');
     if (!button) return;
@@ -219,7 +214,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Обработчик корзин
   const basketHandler = e => {
     if (cart.getTotalItems() === 0) {
       e.preventDefault();
@@ -234,7 +228,6 @@ document.addEventListener('DOMContentLoaded', () => {
     el.addEventListener('click', basketHandler);
   });
 
-  // Обработчики страницы корзины
   if (document.querySelector('.products')) {
     renderBasket();
 
