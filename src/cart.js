@@ -56,14 +56,18 @@ class Cart {
       el.textContent = total;
     });
     
-    document.querySelector('.basket__colvo') && (document.querySelector('.basket__colvo').textContent = 
-      `(в корзине ${total} товар${this.getRussianPlural(total)})`);
+    document.querySelector('.basket__colvo') && (document.querySelector('.basket__colvo').textContent = getTotalItems(total));
   }
+}
 
-  getRussianPlural(number) {
+function getTotalItems(count) {
+    const titles = ['товар', 'товара', 'товаров'];
+    if (count % 100 >= 11 && count % 100 <= 14) {
+        return `(в корзине ${count} ${titles[2]})`;
+    }
     const cases = [2, 0, 1, 1, 1, 2];
-    return number % 100 > 4 && number % 100 < 20 ? 'ов' : cases[(number % 10 < 5) ? number % 10 : 5];
-  }
+    const wordIndex = cases[Math.min(count % 10, 5)];
+    return `(в корзине ${count} ${titles[wordIndex]})`;
 }
 
 const cart = new Cart();
