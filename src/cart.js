@@ -81,6 +81,18 @@ function updateCartCounter() {
 
 document.addEventListener('DOMContentLoaded', updateCartCounter);
 
+document.querySelector(".make__order")?.addEventListener("click", function (e) {
+  if (
+    this.classList.contains("disabled") ||
+    cart.items.length === 0 ||
+    cart.getTotalPrice() < 1500
+  ) {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+  }
+});
+
 function showEmptyCartModal() {
   if (document.getElementById('emptyCartModal')) return;
 
@@ -176,6 +188,33 @@ function showEmptyCartModal() {
 
   overlay.addEventListener('click', closeHandler);
   modal.addEventListener('click', e => e.target === modal && closeHandler());
+}
+
+function updateOrderSummary() {
+  const totalPrice = cart.getTotalPrice();
+  const minOrder = 1;
+  const toFree = Math.max(0, minOrder - totalPrice);
+
+  const totalElement = document.querySelector(
+    ".making-order__info--total--dop"
+  );
+  const freeElement = document.querySelector(".making-order__text--for_free2");
+  const orderButton = document.querySelector(".make__order");
+
+  totalElement &&
+    (totalElement.textContent = `${totalPrice.toLocaleString()} ₽`);
+  freeElement && (freeElement.textContent = `${toFree.toLocaleString()} ₽`);
+
+  if (orderButton) {
+    const isDisabled = cart.items.length === 0 || totalPrice < minOrder;
+    orderButton.disabled = isDisabled;
+
+    if (isDisabled) {
+      orderButton.classList.add("disabled");
+    } else {
+      orderButton.classList.remove("disabled");
+    }
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -304,16 +343,3 @@ function renderBasket() {
 
   updateOrderSummary();
 }
-
-function updateOrderSummary() {
-  const totalPrice = cart.getTotalPrice();
-  const minOrder = 1500;
-  const toFree = Math.max(0, minOrder - totalPrice);
-  
-  const totalElement = document.querySelector('.making-order__info--total--dop');
-  const freeElement = document.querySelector('.making-order__text--for_free2');
-  
-  totalElement && (totalElement.textContent = `${totalPrice.toLocaleString()} ₽`);
-  freeElement && (freeElement.textContent = `${toFree.toLocaleString()} ₽`);
-}
-

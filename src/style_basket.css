@@ -543,3 +543,14 @@ html {
   width: 200px;
   margin-bottom: 20px;
 }
+
+.make__order.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: linear-gradient(135deg, rgb(72, 99, 76), rgb(85, 122, 90)) !important;
+  pointer-events: none;
+}
+
+.make__order {
+  pointer-events: auto;
+}

@@ -145,7 +145,6 @@ input:focus {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* Темная тема для выпадающего списка */
 select.country-code::-ms-expand {
   display: none;
 }
@@ -157,7 +156,7 @@ select.country-code {
   padding-right: 40px;
 }
 
-/* Мобильная адаптация */
+
 @media (max-width: 375px) {
   .country-code,
   .phone-field {
@@ -718,7 +717,6 @@ select.country-code {
   transform: scale(0.98);
 }
 
-/* Адаптация 768px */
 @media (max-width: 768px) {
   .to_basket {
     margin: 30px 0 25px 24px;
@@ -824,7 +822,6 @@ select.country-code {
   }
 }
 
-/* Адаптация 375px */
 @media (max-width: 375px) {
   * {
     font-size: 14px;
