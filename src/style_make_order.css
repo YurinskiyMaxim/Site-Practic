@@ -709,6 +709,13 @@ select.country-code {
   white-space: nowrap;
 }
 
+.submit-order:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: linear-gradient(135deg, rgb(72, 99, 76), rgb(85, 122, 90)) !important;
+  pointer-events: none;
+}
+
 .submit-order:hover {
   background: linear-gradient(135deg, rgb(85, 120, 90), rgb(100, 145, 106));
 }
@@ -927,4 +934,33 @@ select.country-code {
   .label2:nth-child(3):has(input:checked) ~ .selection2 {
     transform: translateX(200%);
   }
+}
+
+.dostavka__adres--all_inputs,
+.change_with--cont,
+.time-picker-wrapper {
+    transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+.dostavka__adres--all_inputs[hidden],
+.change_with--cont[hidden],
+.time-picker-wrapper[hidden] {
+    display: none !important;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.time-picker-wrapper,
+.time-native,
+.input__time {
+    transition: opacity 0.3s ease;
+}
+
+.time-picker-wrapper.hidden,
+.time-native.hidden,
+.input__time.hidden {
+    display: none !important;
+    opacity: 0;
+    pointer-events: none;
 }

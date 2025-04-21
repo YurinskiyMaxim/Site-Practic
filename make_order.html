@@ -205,31 +205,6 @@
         <div>Доставим через  1 час 30 минут</div>
       </div>
     </div>
-    <div class="dostavka__adres">Адрес доставки</div>
-    <div class="dostavka__adres--all_inputs">
-      <div class="dostavka__adres--inputs1">
-        <div class="dostavka__adres--inputs1-1-cont">
-          <input type="text" placeholder="Укажите улицу*">
-        </div>
-        <div class="dostavka__adres--inputs1-2-cont">
-          <input type="number" placeholder="Номер дома*">
-        </div>
-      </div>
-      <div class="dostavka__adres--inputs2">
-        <div class="dostavka__adres--inputs2-1-cont">
-          <input type="number" placeholder="№ квартиры/офиса">
-        </div>
-        <div class="dostavka__adres--inputs2-2-cont">
-          <input type="number" placeholder="Подъезд">
-        </div>
-        <div class="dostavka__adres--inputs2-3-cont">
-          <input type="number" placeholder="Этаж">
-        </div>
-      </div>
-      <div class="dostavka__adres--inputs3-1-cont ">
-        <input class="dostavka__adres--inputs3-1" type="text" placeholder="Комментарий">
-      </div>
-    </div>
   </div>
   <div class="dostavka__payment">
     <div class="dostavka__payment--zagol">3. Оплатить</div>
@@ -237,21 +212,18 @@
       <div class="pane2">
           <label class="label2">
               <span>Оплата онлайн</span>
-              <input id="first" class="input" name="radio2" type="radio">
+              <input id="online" class="input" name="radio2" type="radio" value="online">
           </label>
           <label class="label2">
               <span>Курьеру картой</span>
-              <input id="middle" class="input" checked="checked" name="radio2" type="radio">
+              <input id="card" class="input" name="radio2" type="radio" value="card" checked>
           </label>
           <label class="label2">
             <span>Наличными</span>
-            <input id="last" class="input" checked="checked" name="radio2" type="radio">
+            <input id="cash" class="input" name="radio2" type="radio" value="cash">
         </label>
           <span class="selection2"></span>
       </div>
-    </div>
-    <div class="change_with--cont">
-      <input type="number" placeholder="Сдача с">
     </div>
   </div>
   <div class="dostavka__time">
@@ -277,7 +249,7 @@
       <div class="person__quantity--text">Кол-во персон</div>
       <div class="counter">
         <button class="mines"></button>
-          <input class="value" type="number" value="0" min="0" max="8" readonly>
+          <input class="value" type="number" value="1" min="1" max="8" readonly>
         <button class="plus"></button>
     </div>
     </div>
@@ -305,8 +277,6 @@
     </div>
     <button type="submit" class="submit-order">Оформить заказ</button>
   </div>
-  
-  
   <div class="bottom">
     <button class="bottom__button"> <img src="./public/IMG/Arrow.svg" alt="UP"></button>
     <ul class="bottom__text1">
