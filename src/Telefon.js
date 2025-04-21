@@ -3,8 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const phoneField = document.querySelector('.phone-field');
     const countryCode = document.querySelector('.country-code');
     let mask;
-  
-    // Активация поля
+
     phoneContainer.addEventListener('click', function(e) {
       if (phoneField.readOnly) {
         phoneField.removeAttribute('readonly');
@@ -13,8 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         phoneField.focus();
       }
     });
-  
-    // Инициализация маски
+
     function initMask() {
       const masks = {
         '7': '+7 (000) 000-00-00',
@@ -33,16 +31,14 @@ document.addEventListener('DOMContentLoaded', function() {
   
       phoneField.placeholder = mask.masked.placeholder;
     }
-  
-    // Смена кода страны
+
     countryCode.addEventListener('change', function() {
       if (mask) {
         initMask();
         phoneField.value = '';
       }
     });
-  
-    // Обработчик блюра
+
     phoneField.addEventListener('blur', function() {
       if (!mask.unmaskedValue) {
         phoneField.placeholder = 'Телефон*';
