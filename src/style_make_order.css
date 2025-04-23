@@ -20,9 +20,10 @@ input:focus {
   margin: 49px 0 34px 318px;
   cursor: pointer;
   transition: 0.5s;
+  width: 92px;
 }
 
-.to_basket:hover{
+.to_basket:hover {
   transition: 0.5s;
   transform: scale(0.95);
 }
@@ -106,7 +107,7 @@ input:focus {
 }
 
 .phone-input.active {
-  border-color: #72A479;
+  border-color: #72a479;
 }
 
 .country-code {
@@ -120,7 +121,7 @@ input:focus {
   font-family: "Gilroy";
   font-size: 16px;
 }
-.country-code:focus{
+.country-code:focus {
   border: none;
   outline: none;
 }
@@ -156,20 +157,18 @@ select.country-code {
   padding-right: 40px;
 }
 
-
 @media (max-width: 375px) {
   .country-code,
   .phone-field {
     padding: 15px;
     font-size: 14px;
   }
-  
+
   select.country-code {
     background-position: right 10px center;
     padding-right: 30px;
   }
 }
-
 
 .dostavka_info {
   display: flex;
@@ -306,7 +305,7 @@ select.country-code {
   width: 100% auto;
   margin: 21px 320px;
   flex-direction: column;
-  padding: 30px 0 31px 31px;
+  padding: 30px 30px 31px 31px;
   background: linear-gradient(90deg, rgb(73, 69, 68), rgb(80, 75, 74));
   border-radius: 10px;
 }
@@ -712,7 +711,11 @@ select.country-code {
 .submit-order:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-  background: linear-gradient(135deg, rgb(72, 99, 76), rgb(85, 122, 90)) !important;
+  background: linear-gradient(
+    135deg,
+    rgb(72, 99, 76),
+    rgb(85, 122, 90)
+  ) !important;
   pointer-events: none;
 }
 
@@ -797,11 +800,11 @@ select.country-code {
   .selection {
     width: 50% !important;
   }
-  
+
   .selection2 {
     width: 33.333% !important;
   }
-  
+
   .selection3 {
     width: 50% !important;
   }
@@ -913,11 +916,11 @@ select.country-code {
   .selection {
     width: 50% !important;
   }
-  
+
   .selection2 {
     width: 33.33% !important;
   }
-  
+
   .selection3 {
     width: 50% !important;
   }
@@ -939,28 +942,51 @@ select.country-code {
 .dostavka__adres--all_inputs,
 .change_with--cont,
 .time-picker-wrapper {
-    transition: opacity 0.3s ease, height 0.3s ease;
+  transition: opacity 0.3s ease, height 0.3s ease;
 }
 
 .dostavka__adres--all_inputs[hidden],
 .change_with--cont[hidden],
 .time-picker-wrapper[hidden] {
-    display: none !important;
-    opacity: 0;
-    height: 0;
-    overflow: hidden;
+  display: none !important;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
 }
 
-.time-picker-wrapper,
-.time-native,
-.input__time {
-    transition: opacity 0.3s ease;
+
+.card-payment-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
 }
 
-.time-picker-wrapper.hidden,
-.time-native.hidden,
-.input__time.hidden {
-    display: none !important;
-    opacity: 0;
-    pointer-events: none;
+.card-details-cont {
+  display: flex;
+  gap: 15px;
+}
+
+.card-details-cont input {
+  width: 50%;
+}
+
+.card-input {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  color: white;
+}
+
+.card-input:invalid {
+  border-color: #ff4444;
+  box-shadow: 0 0 5px rgba(255, 68, 68, 0.3);
+}
+
+.error-message {
+  color: #ff4444;
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
 }

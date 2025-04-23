@@ -162,7 +162,7 @@
     <div class="konkact_info__zagol">1. Контактная информация</div>
     <div class="konkact_info__inputs">
       <div class="input__conteiner1">
-        <input class="konkact_info__input1" type="text" placeholder="Имя*">
+        <input class="konkact_info__input1" type="text" placeholder="Имя*" required>
       </div>
       <div class="input__conteiner2">
         <div class="phone-input-wrapper">
@@ -173,12 +173,7 @@
               <option value="44">+44</option>
               <option value="49">+49</option>
             </select>
-            <input 
-              type="tel"
-              class="phone-field"
-              placeholder="Телефон*"
-              readonly
-            >
+            <input type="tel" class="phone-field" placeholder="Телефон*" required>
           </div>
         </div>
       </div>
@@ -191,7 +186,7 @@
         <div class="pane">
             <label class="label">
                 <span>Доставка</span>
-                <input id="first" class="input" name="radio1" type="radio">
+                <input type="radio" class="input" id="delivery-now" name="radio1" value="now" checked>
             </label>
             <label class="label">
                 <span>Самовывоз</span>
@@ -232,17 +227,13 @@
       <div class="pane3">
           <label class="label3">
               <span>В ближайшее время</span>
-              <input id="first" class="input" name="radio3" type="radio">
+              <input type="radio" class="input" id="time-now" name="radio3" value="now" checked>
           </label>
           <label class="label3">
               <span>Ко времени</span>
-              <input id="last" class="input" checked="checked" name="radio3" type="radio">
+              <input type="radio" class="input" id="time-later" name="radio3" value="later">
           </label>
             <span class="selection3"></span>
-      </div>
-      <div class="time-picker-wrapper">
-        <input type="text" class="input__time" placeholder="Укажите время" readonly>
-        <input type="time" class="time-native">
       </div>
     </div>
     <div class="person__quantity--cont">
@@ -263,7 +254,7 @@
       <label class="callback-option">
         <input type="radio" name="callback" value="yes">
         <span class="custom-radio"></span>
-        <span class="option-text">Попробуется звонок оператора</span>
+        <span class="option-text">Потребуется звонок оператора</span>
       </label>
     </div>
   </div>
