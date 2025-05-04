@@ -7,3 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const timeInput = document.querySelector(".input__time");
+  if (timeInput) {
+    timeInput.addEventListener("click", function () {
+      this.focus();
+    });
+  }
+});

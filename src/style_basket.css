@@ -554,3 +554,15 @@ html {
 .make__order {
   pointer-events: auto;
 }
+
+.making-order__text--for_free2 {
+  font-weight: bold;
+  transition: color 0.3s;
+  margin-left: 5px;
+}
+
+.make__order--min-sum {
+  color: #a6a7ab;
+  font-size: 12px;
+  margin-top: 8px;
+}

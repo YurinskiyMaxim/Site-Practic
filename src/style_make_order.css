@@ -475,7 +475,7 @@ select.country-code {
   width: 100%;
   height: 100%;
   border: 2px solid transparent;
-  outline: solid 1px rgba(255, 255, 255, 0.1);
+  border: solid 1px rgba(255, 255, 255, 0.1);
   background: none;
   border-radius: 10px;
   transition: all 0.5s;
@@ -989,4 +989,209 @@ select.country-code {
   font-size: 12px;
   margin-top: 5px;
   display: none;
+  padding-left: 15px;
+}
+
+.invalid {
+  display: flex;
+  border-radius: 10px;
+  border-color: #ff4444 !important;
+  box-shadow: 0 0 5px rgba(255, 68, 68, 1);
+}
+
+.dostavka__adres--all_inputs,
+.change_with--cont,
+.time-picker-wrapper,
+.card-payment-fields {
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.dostavka__adres {
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+.dostavka__adres--all_inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.dostavka__adres--inputs1,
+.dostavka__adres--inputs2 {
+  display: flex;
+  gap: 15px;
+}
+
+.dostavka__adres--inputs1 > div,
+.dostavka__adres--inputs2 > div {
+  flex: 1;
+}
+
+.dostavka__adres--inputs1 input,
+.dostavka__adres--inputs2 input,
+.dostavka__adres--inputs3 input {
+  width: 100%;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: white;
+}
+
+.dostavka__adres--inputs3-1-cont {
+  margin-top: 15px;
+}
+
+.change_with--cont input {
+  width: 100%;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .dostavka__adres--inputs1,
+  .dostavka__adres--inputs2 {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .dostavka__adres--inputs1 > div,
+  .dostavka__adres--inputs2 > div {
+    width: 100%;
+  }
+}
+.restaurant-select {
+  margin-top: 10px;
+}
+
+.restaurant-select select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 2px solid #72a479;
+  border-radius: 6px;
+  background-color: linear-gradient(90deg, rgb(73, 69, 68), rgb(80, 75, 74));
+  color: white;
+  outline: none;
+   background: rgb(73, 69, 68);
+}
+
+.restaurant-select select option {
+  background-color: rgb(73, 69, 68);
+  color: white;
+}
+
+.error-border {
+  border: 1px solid red;
+}
+.error-placeholder::placeholder {
+  color: red;
+}
+
+.dostavka__adres--inputs1-1-cont,
+.dostavka__adres--inputs1-2-cont {
+  position: relative;
+}
+
+.error-message {
+  position: absolute;
+  bottom: -20px;
+  left: 15px;
+  color: #ff4444;
+  font-size: 12px;
+  display: none;
+}
+
+.invalid {
+  border-color: #ff4444 !important;
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+}
+
+
+.card-payment-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  overflow: visible;
+}
+
+.card-details-cont {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+
+.card-details-cont > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.card-input {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.dostavka__payment {
+  position: relative;
+  overflow: visible;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .card-details-cont {
+    flex-direction: column;
+  }
+  
+  .card-details-cont > div {
+    width: 100%;
+  }
+  
+  .dostavka__payment {
+    padding: 25px 20px 40px;
+  }
+}
+
+.order-success-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.order-success-message {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -45%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+.modal-window {
+  animation: fadeIn 0.3s ease-out;
 }

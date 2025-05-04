@@ -70,6 +70,7 @@ function getTotalItems(count) {
     return `(в корзине ${count} ${titles[wordIndex]})`;
 }
 
+
 const cart = new Cart();
 
 function updateCartCounter() {
@@ -85,7 +86,7 @@ document.querySelector(".make__order")?.addEventListener("click", function (e) {
   if (
     this.classList.contains("disabled") ||
     cart.items.length === 0 ||
-    cart.getTotalPrice() < 1500
+    cart.getTotalPrice() < 500
   ) {
     e.preventDefault();
     e.stopPropagation();
@@ -192,31 +193,40 @@ function showEmptyCartModal() {
 
 function updateOrderSummary() {
   const totalPrice = cart.getTotalPrice();
-  const minOrder = 1;
-  const toFree = Math.max(0, minOrder - totalPrice);
+  const minOrder = 500; // Минимальная сумма заказа
+  const freeDeliveryThreshold = 1500; // Порог бесплатной доставки
 
   const totalElement = document.querySelector(
     ".making-order__info--total--dop"
   );
-  const freeElement = document.querySelector(".making-order__text--for_free2");
+  const deliveryStatusElement = document.querySelector(
+    ".making-order__text--for_free"
+  );
+  const toFreeElement = document.querySelector(
+    ".making-order__text--for_free2"
+  );
   const orderButton = document.querySelector(".make__order");
 
-  totalElement &&
-    (totalElement.textContent = `${totalPrice.toLocaleString()} ₽`);
-  freeElement && (freeElement.textContent = `${toFree.toLocaleString()} ₽`);
-
-  if (orderButton) {
-    const isDisabled = cart.items.length === 0 || totalPrice < minOrder;
-    orderButton.disabled = isDisabled;
-
-    if (isDisabled) {
-      orderButton.classList.add("disabled");
-    } else {
-      orderButton.classList.remove("disabled");
-    }
+  // Обновление статуса доставки
+  if (totalPrice >= freeDeliveryThreshold) {
+    deliveryStatusElement.textContent = "Доставка бесплатная!";
+    toFreeElement.textContent = "0 ₽";
+    toFreeElement.style.color = "#72a479";
+  } else {
+    const needed = freeDeliveryThreshold - totalPrice;
+    deliveryStatusElement.textContent = "До бесплатной доставки осталось:";
+    toFreeElement.textContent = `${needed.toLocaleString()} ₽`;
+    toFreeElement.style.color = needed <= 300 ? "#72a479" : "#ff4444";
   }
-}
 
+  // Обновление общей суммы
+  totalElement.textContent = `${totalPrice.toLocaleString()} ₽`;
+
+  // Блокировка кнопки заказа
+  const isDisabled = cart.items.length === 0 || totalPrice < minOrder;
+  orderButton.disabled = isDisabled;
+  orderButton.classList.toggle("disabled", isDisabled);
+}
 document.addEventListener('DOMContentLoaded', () => {
   const urlParams = new URLSearchParams(window.location.search);
   const scrollValue = urlParams.get('scroll');
